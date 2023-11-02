@@ -13,10 +13,10 @@ export const getRandomHexColor = () =>
     .toString(16)
     .padStart(6, 0)}`;
 
-const Statistics = ({ stats }) => {
+const Statistics = ({ title, stats }) => {
   return (
     <StatisticsSection>
-      <Title>Upload stats</Title>
+      {title && <Title>{title}</Title>}
       <StatList>
         {stats.map(stat => (
           <StatItem
